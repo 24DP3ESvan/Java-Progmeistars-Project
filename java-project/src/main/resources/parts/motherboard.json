@@ -1,0 +1,9 @@
+[
+  {
+    "name": "ASUS ROG Strix X670E-E Gaming",
+    "price": 399.99,
+    "socket": "AM5",
+    "chipset": "X670E",
+    "formFactor": "ATX"
+  }
+]

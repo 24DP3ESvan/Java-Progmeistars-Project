@@ -1,0 +1,11 @@
+[
+  {
+    "name": "AMD Ryzen 7 7800X3D",
+    "price": 299.99,
+    "cores": 8,
+    "threads": 16,
+    "baseClock": "4.2GHz",
+    "boostClock": "5.0GHz",
+    "tdp": "120W"
+  }
+]
