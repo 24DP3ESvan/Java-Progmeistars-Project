@@ -41,9 +41,20 @@ This is a Spring Boot rewrite of the Python PC Builder project.
 4. If prompted, allow the Java language server to import the Maven project.
 
 ## Run
-From the `java-project` folder:
+From the `java-project` folder, use the web API mode:
 ```powershell
 mvn spring-boot:run
+```
+
+To start the project in interactive console mode like the Python version, run:
+```powershell
+mvn spring-boot:run -Dspring-boot.run.arguments=--console
+```
+
+Or, after packaging the jar:
+```powershell
+mvn package
+java -jar target/pc-builder-0.0.1-SNAPSHOT.jar --console
 ```
 
 ## RAWG and UserBenchmark usage
