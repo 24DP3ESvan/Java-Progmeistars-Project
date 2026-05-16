@@ -4,5 +4,23 @@
     "price": 159.99,
     "speed": "6000MT/s",
     "type": "DDR5"
+  },
+  {
+    "name": "G.Skill Ripjaws S5 32GB DDR5",
+    "price": 149.99,
+    "speed": "6000MT/s",
+    "type": "DDR5"
+  },
+  {
+    "name": "Kingston Fury Beast 16GB DDR5",
+    "price": 84.99,
+    "speed": "5200MT/s",
+    "type": "DDR5"
+  },
+  {
+    "name": "Crucial Ballistix 32GB DDR4",
+    "price": 109.99,
+    "speed": "3600MT/s",
+    "type": "DDR4"
   }
 ]

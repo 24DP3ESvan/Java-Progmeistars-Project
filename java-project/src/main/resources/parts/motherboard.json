@@ -5,5 +5,26 @@
     "socket": "AM5",
     "chipset": "X670E",
     "formFactor": "ATX"
+  },
+  {
+    "name": "MSI MPG Z690 Carbon WiFi",
+    "price": 289.99,
+    "socket": "LGA1700",
+    "chipset": "Z690",
+    "formFactor": "ATX"
+  },
+  {
+    "name": "Gigabyte B650 Aorus Elite",
+    "price": 189.99,
+    "socket": "AM5",
+    "chipset": "B650",
+    "formFactor": "ATX"
+  },
+  {
+    "name": "ASUS TUF Gaming B650M-PLUS",
+    "price": 169.99,
+    "socket": "AM5",
+    "chipset": "B650",
+    "formFactor": "Micro-ATX"
   }
 ]

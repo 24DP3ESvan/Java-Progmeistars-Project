@@ -4,5 +4,23 @@
     "price": 599.99,
     "memory": "12GB",
     "tdp": "200W"
+  },
+  {
+    "name": "AMD Radeon RX 7900 XT",
+    "price": 899.99,
+    "memory": "20GB",
+    "tdp": "300W"
+  },
+  {
+    "name": "NVIDIA GeForce RTX 4060 Ti",
+    "price": 399.99,
+    "memory": "8GB",
+    "tdp": "160W"
+  },
+  {
+    "name": "AMD Radeon RX 7800 XT",
+    "price": 499.99,
+    "memory": "16GB",
+    "tdp": "275W"
   }
 ]

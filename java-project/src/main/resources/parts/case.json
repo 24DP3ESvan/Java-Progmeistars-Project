@@ -4,5 +4,23 @@
     "price": 79.99,
     "formFactor": "ATX",
     "color": "Black"
+  },
+  {
+    "name": "Corsair 4000D Airflow",
+    "price": 94.99,
+    "formFactor": "ATX",
+    "color": "Black"
+  },
+  {
+    "name": "Fractal Design Meshify C",
+    "price": 109.99,
+    "formFactor": "ATX",
+    "color": "Black"
+  },
+  {
+    "name": "Cooler Master NR200",
+    "price": 89.99,
+    "formFactor": "Mini-ITX",
+    "color": "Gray"
   }
 ]

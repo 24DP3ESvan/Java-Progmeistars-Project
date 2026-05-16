@@ -4,5 +4,23 @@
     "price": 129.99,
     "type": "SSD",
     "capacity": "1TB"
+  },
+  {
+    "name": "WD Black SN770 1TB",
+    "price": 109.99,
+    "type": "SSD",
+    "capacity": "1TB"
+  },
+  {
+    "name": "Crucial P3 2TB",
+    "price": 129.99,
+    "type": "SSD",
+    "capacity": "2TB"
+  },
+  {
+    "name": "Seagate BarraCuda 2TB",
+    "price": 54.99,
+    "type": "HDD",
+    "capacity": "2TB"
   }
 ]

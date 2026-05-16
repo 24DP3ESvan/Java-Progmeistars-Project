@@ -7,5 +7,32 @@
     "baseClock": "4.2GHz",
     "boostClock": "5.0GHz",
     "tdp": "120W"
+  },
+  {
+    "name": "Intel Core i7-13700K",
+    "price": 409.99,
+    "cores": 16,
+    "threads": 24,
+    "baseClock": "3.4GHz",
+    "boostClock": "5.4GHz",
+    "tdp": "125W"
+  },
+  {
+    "name": "AMD Ryzen 5 7600X",
+    "price": 229.99,
+    "cores": 6,
+    "threads": 12,
+    "baseClock": "4.7GHz",
+    "boostClock": "5.3GHz",
+    "tdp": "105W"
+  },
+  {
+    "name": "Intel Core i5-13600K",
+    "price": 319.99,
+    "cores": 14,
+    "threads": 20,
+    "baseClock": "3.5GHz",
+    "boostClock": "5.1GHz",
+    "tdp": "125W"
   }
 ]
