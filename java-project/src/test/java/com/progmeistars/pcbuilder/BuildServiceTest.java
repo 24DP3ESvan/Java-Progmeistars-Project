@@ -3,6 +3,7 @@ package com.progmeistars.pcbuilder;
 import com.progmeistars.pcbuilder.dto.BuildDTO;
 import com.progmeistars.pcbuilder.dto.BuildRequest;
 import com.progmeistars.pcbuilder.dto.PartDTO;
+import com.progmeistars.pcbuilder.exception.ResourceNotFoundException;
 import com.progmeistars.pcbuilder.service.BuildService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @SpringBootTest
 class BuildServiceTest {
@@ -37,5 +39,28 @@ class BuildServiceTest {
         BuildDTO loaded = buildService.getBuild(saved.getId());
         assertThat(loaded.getName()).isEqualTo("Test Build");
         assertThat(loaded.getComponents()).containsKey("CPU");
+    }
+
+    @Test
+    void updateBuildThrowsNotFoundForUnknownId() {
+        BuildRequest request = BuildRequest.builder().name("New Name").build();
+
+        assertThatThrownBy(() -> buildService.updateBuild(9999L, request))
+                .isInstanceOf(ResourceNotFoundException.class)
+                .hasMessageContaining("Build not found");
+    }
+
+    @Test
+    void updateBuildThrowsWhenRequestIsNull() {
+        PartDTO cpu = PartDTO.builder().category("CPU").name("Example CPU").price(199.99).build();
+        BuildRequest request = BuildRequest.builder()
+                .name("Test Build")
+                .components(Map.of("CPU", cpu))
+                .build();
+        BuildDTO saved = buildService.saveBuild(request);
+
+        assertThatThrownBy(() -> buildService.updateBuild(saved.getId(), null))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("Build request cannot be null");
     }
 }

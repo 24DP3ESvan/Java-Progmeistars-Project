@@ -3,6 +3,7 @@ package com.progmeistars.pcbuilder.service;
 import com.progmeistars.pcbuilder.dto.BuildDTO;
 import com.progmeistars.pcbuilder.dto.BuildRequest;
 import com.progmeistars.pcbuilder.entity.BuildEntity;
+import com.progmeistars.pcbuilder.exception.ResourceNotFoundException;
 import com.progmeistars.pcbuilder.repository.BuildRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,7 +41,7 @@ public class BuildService {
     public BuildDTO getBuild(Long id) {
         return repository.findById(id)
                 .map(this::toDto)
-                .orElseThrow(() -> new IllegalArgumentException("Build not found: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Build not found: " + id));
     }
 
     public java.util.List<BuildDTO> listBuilds() {
@@ -49,8 +50,12 @@ public class BuildService {
 
     @Transactional
     public BuildDTO updateBuild(Long id, BuildRequest request) {
+        if (request == null) {
+            throw new IllegalArgumentException("Build request cannot be null");
+        }
+
         BuildEntity entity = repository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Build not found: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Build not found: " + id));
         if (request.getName() != null && !request.getName().isBlank()) {
             entity.setName(request.getName().trim());
         }

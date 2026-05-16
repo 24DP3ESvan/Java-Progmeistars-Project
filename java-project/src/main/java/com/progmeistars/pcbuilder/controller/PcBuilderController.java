@@ -21,6 +21,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.progmeistars.pcbuilder.exception.ResourceNotFoundException;
+
 import java.util.List;
 
 @RestController
@@ -107,7 +109,7 @@ public class PcBuilderController {
     public BuildDTO getBuild(@PathVariable Long id) {
         try {
             return buildService.getBuild(id);
-        } catch (IllegalArgumentException e) {
+        } catch (ResourceNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage(), e);
         }
     }
@@ -116,6 +118,8 @@ public class PcBuilderController {
     public BuildDTO updateBuild(@PathVariable Long id, @RequestBody BuildRequest request) {
         try {
             return buildService.updateBuild(id, request);
+        } catch (ResourceNotFoundException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage(), e);
         } catch (IllegalArgumentException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage(), e);
         }

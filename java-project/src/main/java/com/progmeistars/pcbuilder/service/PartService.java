@@ -1,14 +1,5 @@
 package com.progmeistars.pcbuilder.service;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.progmeistars.pcbuilder.dto.PartDTO;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-
-import jakarta.annotation.PostConstruct;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -24,6 +15,17 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.progmeistars.pcbuilder.dto.PartDTO;
+
+import jakarta.annotation.PostConstruct;
+
 @Service
 public class PartService {
 
@@ -32,8 +34,8 @@ public class PartService {
             "Korpuss", "case.json",
             "CPU", "cpu.json",
             "Draivers", "internal-hard-drive.json",
-            "Operativa atmiņa", "memory.json",
-            "Mātesplate", "motherboard.json",
+            "Operativa atmina", "memory.json",
+            "Matesplate", "motherboard.json",
             "Videokarte", "video-card.json"
     );
 
